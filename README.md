@@ -6,6 +6,8 @@ Backend service for the **SplitWise Clone** application built with **Spring Boot
 
 https://backend-splitwise.onrender.com
 
+> **Note:** This project uses the Render Free Plan. The backend may take **30–60 seconds** to respond on the first request after a period of inactivity because the service automatically sleeps when idle.
+
 ---
 
 # ✨ Features
