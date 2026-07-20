@@ -5,14 +5,17 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.util.Date;
 
 @Component
 public class JwtUtil {
 
-    private final String SECRET_KEY = "7f8b4e1c9d2a6f0b3c5e8a1d4f7b9c2e6a8d1f3b5c7e9a2d4f6b8c1e3a5d7f9";
-    private final long EXPIRATION_TIME = 86400000; // 1 day
+    @Value("${jwt.secret}")
+    private String SECRET_KEY;
+
+    private final long EXPIRATION_TIME = 86400000;
 
     public String generateToken(User user) {
         return Jwts.builder()
