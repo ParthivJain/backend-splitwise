@@ -121,7 +121,7 @@ public class TransactionController {
         transactionService.settleTransactions(currentUser, friend);
 
         String title = currentUser.getName() + " has settled all transactions with you";
-        String message = "Do you want to settle all transactions with " + currentUser.getName() + "? [friendId:" + currentUser.getId() + "]";
+        String message = "Do you want to settle all transactions with " + currentUser.getName() + "? friendId : " + currentUser.getId() ;
 
         notificationService.sendNotification(friend, "settlement", title, message);
 
