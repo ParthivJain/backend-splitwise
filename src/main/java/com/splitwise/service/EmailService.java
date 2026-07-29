@@ -8,7 +8,7 @@ import org.springframework.mail.javamail.JavaMailSender;
 @Service
 public class EmailService {
 
-    @Autowired(required = false)
+    @Autowired
     private JavaMailSender mailSender;
 
     public void sendOtpMail(String to, String otp){
